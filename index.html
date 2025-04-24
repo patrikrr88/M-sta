@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databáze</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Databáze měst</h1>
+
+  <nav>
+    <a href="#tabulka">Tabulka</a>
+    <a href="#formular">Formulář</a>
+  </nav>
+
+  <section id="tabulka">
+    <h2>Tabulka měst</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>
+            Město<br />
+            <input type="text" id="filterTableInput" placeholder="Filtruj města..." />
+          </th>
+          <th>Počet obyvatel</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr><td>1</td><td>Praha</td><td>1,3M</td></tr>
+        <tr><td>2</td><td>Varnsdorf</td><td>15K</td></tr>
+        <tr><td>3</td><td>Liberec</td><td>105K</td></tr>
+        <tr><td>4</td><td>Chřibská</td><td>1,3K</td></tr>
+        <tr><td>5</td><td>Plzeň</td><td>175K</td></tr>
+        <tr><td>6</td><td>Olomouc</td><td>100K</td></tr>
+        <tr><td>7</td><td>Louny</td><td>18K</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="formular">
+    <h2>Formulář výběru města</h2>
+
+    <label for="filterSelectInput">Filtruj výběr města:</label>
+    <input type="text" id="filterSelectInput" placeholder="Filtruj..." />
+
+    <label for="citySelect">Vyber město:</label>
+    <select id="citySelect">
+      <option value="Praha">Praha</option>
+      <option value="Varnsdorf">Varnsdorf</option>
+      <option value="Liberec">Liberec</option>
+      <option value="Chřibská">Chřibská</option>
+      <option value="Plzeň">Plzeň</option>
+      <option value="Olomouc">Olomouc</option>
+      <option value="Louny">Louny</option>
+    </select>
+
+    <button id="submitBtn">Odeslat</button>
+    <div id="resultMsg"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
